@@ -46,7 +46,7 @@ Route::get('/partners', function () {
 })->name('partners');
 
 Route::get('/serveices', function () {
-    return view('pages.serveices');
+    return view('pages.services');
 })->name('serveices');
 
 Route::get('/admin/dashboard', function () {
@@ -72,3 +72,7 @@ Route::get('/admin/dashboard/qualifications', function () {
 Route::get('/admin/dashboard/skills', function () {
     return view('pages.dashboard.skills');
 })->name('skills');
+
+// Route::post('/admin/dashboard', function () {
+//     return view('pages.dashboard.dashboard');
+// })->name('postLogin');
