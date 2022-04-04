@@ -19,7 +19,7 @@
 	<header class="navbar navbar-expand-lg navbar-light bg-light container-fluid hd">
 		<div class="container">
 			<!-- ====== BRAND ====== -->
-			<a class="navbar-brand ms-9 brand" href="../index.html">d<span class="worning">hr</span></a>
+			<a class="navbar-brand ms-9 brand" href="{{route('home')}}">d<span class="worning">hr</span></a>
 
 			<!-- ====== BURGER BUTTON | RESPONSIVE ====== -->
 			<button class="navbar-toggler burger-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,38 +30,38 @@
 			<nav class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5 ul-nav">
 					<li class="nav-item">
-						<a class="nav-link active nav-a1-li" aria-current="page" href="../index.html">home</a>
+						<a class="nav-link active nav-a1-li" aria-current="page" href="{{route('home')}}">home</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link nav-a2-li" href="jobs.html">jobs</a>
+						<a class="nav-link nav-a2-li" href="{{route('jobs')}}">jobs</a>
 					</li>
 				
 					<li class="nav-item">
-						<a class="nav-link nav-a3-li" href="partners.html">partners</a>
+						<a class="nav-link nav-a3-li" href="{{route('partners')}}">partners</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link nav-a1-li" href="about.html">about us</a>
+						<a class="nav-link nav-a1-li" href="{{route('about')}}">about us</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link nav-a2-li" href="contact.html">contact us</a>
+						<a class="nav-link nav-a2-li" href="{{route('contact')}}">contact us</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link nav-a3-li" href="services.html">our services</a>
+						<a class="nav-link nav-a3-li" href="{{rout('services')}}">our services</a>
 					</li>
 				</ul>
 
 				<!-- ====== LOGIN AND SIGNUP ====== -->
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5 ul-nav-reg">
 					<li class="nav-item">
-						<a class="nav-link nav-log-li" href="login.html">login</a>
+						<a class="nav-link nav-log-li" href="{{route('login')}}">login</a>
 					</li>
 				
 					<li class="nav-item">
-						<a class="nav-link nav-sign-li" href="signup.html">signup</a>
+						<a class="nav-link nav-sign-li" href="{{route('register')}}">signup</a>
 					</li>
 				</ul>
 			</nav>
@@ -104,7 +104,7 @@
 									<div class="mt-3 text-end"><a class="nav-link-style fs-ms mt-5" href="">Forgot password?</a></div>
                                 </div>
 								<a href="dashboard/dashboard.html" class="btn btn-danger d-block w-100 rounded-pill" type="submit">Sign in</a>
-								<p class="fs-sm pt-3 mb-0">Do you have an account? <a href="signup.html" class="fw-medium" data-view="#modal-signup-view">Sign up</a></p>
+								<p class="fs-sm pt-3 mb-0">Do you have an account? <a href="{{route('register')}}" class="fw-medium" data-view="#modal-signup-view">Sign up</a></p>
 							</form>
 						</div>
 					</div>
