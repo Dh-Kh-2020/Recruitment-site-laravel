@@ -29,7 +29,7 @@
 			<nav class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5 ul-nav">
 					<li class="nav-item">
-						<a class="nav-link active nav-a1-li" aria-current="page" href="index.html">home</a>
+						<a class="nav-link active nav-a1-li" aria-current="page" href="{{route('home')}}">home</a>
 					</li>
 
 					<li class="nav-item">
@@ -233,7 +233,7 @@
 				<div class="row">
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/SDF.png" alt="">
@@ -260,7 +260,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/FMF.png" alt="">
@@ -288,7 +288,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/Nahdah-Makers.png" alt="">
@@ -316,7 +316,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/MEDAIR.jpg" alt="">
@@ -346,7 +346,7 @@
 				<div class="row">
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/SDF.png" alt="">
@@ -373,7 +373,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/FMF.png" alt="">
@@ -401,7 +401,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/Nahdah-Makers.png" alt="">
@@ -429,7 +429,7 @@
 					</div>
 					<!-- Job card -->
 					<div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
-						<a href="{{ route('jobDetails') }}" style="text-decoration: none;">
+						<a href="pages/jobDetails.html" style="text-decoration: none;">
 						<article class="card p-2 crd-bd">
 							<div class="p-1 rounded d-flex justify-content-center co-logo shadow-sm mt-2">
 								<img class="card-img-top mx-auto" src="assets/imgs/jobs/MEDAIR.jpg" alt="">
