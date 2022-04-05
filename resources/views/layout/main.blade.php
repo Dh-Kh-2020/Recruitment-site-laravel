@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('../components/meta')
-    <title>DHR | Recruiment Site</title>
+    <!-- <title>DHR | Recruiment Site</title> -->
 </head>
 <body>
     <!-- ====== START HEADER ====== -->

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('../components/dash-meta')
-	<title>DHR | Admin | Recruitment</title>
+	<!-- <title>DHR | Admin | Recruitment</title> -->
 </head>
 <body class="sb-nav-fixed" style="background-color: #fff;">
     <!-- ====== START HEADER ====== -->
