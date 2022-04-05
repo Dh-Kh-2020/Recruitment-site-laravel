@@ -1,3 +1,4 @@
+<title>DHR | Admin - Experiences</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')

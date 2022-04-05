@@ -1,3 +1,4 @@
+<title>DHR | Recruiment Site - Login</title>
 @extends('layout.main')
 
 @section('main-content')

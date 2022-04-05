@@ -1,3 +1,4 @@
+<title>DHR | Admin - Dashboard</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')
