@@ -1,13 +1,6 @@
-<!DOCTYPE html><html lang="en">
-<head>
-    @include('../components/meta')
-	<title>DHR</title>
-</head>
-<body>
-	<!-- ====== START HEADER ====== -->
-	@include('../components/header')
-	<!-- ====== END HEADER ====== -->
+@extends('layout.main')
 
+@section('main-content')
 	<!-- START SIGN UP -->
 	<main class="signup-sec">
 		<div class="container-lg">
@@ -64,7 +57,4 @@
 		</div>
 	</main>
 	<!-- END SIGN UP -->
-
-	<script src="../assets/js/bootstrap.js"></script>
-</body>
-</html>
+@stop
