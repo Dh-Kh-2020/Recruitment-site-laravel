@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	@include('components/meta')
-	<title>DHR</title>
-</head>
-<body class="bg-light">
-	<!-- ====== START HEADER ====== -->
-	@include('components/header')
-	<!-- ====== END HEADER ====== -->
+@extends('layout.main')
 
+@section('main-content')
 	<!-- ====== START IMAGE SLIDER ====== -->
 	<section id="carouselExampleControls" class="carousel slide sec-pos" data-bs-ride="carousel">
 		<div class="carousel-inner">
@@ -465,29 +457,4 @@
 			<!-- ====== END ADVERTISEMENT ====== -->
 		</div>
 	</section>
-
-	<!-- 
-
-		<div id="carouselExampleSlidesOnly" class="carousel slide col-auto mt-5" data-bs-ride="carousel">
-				<div class="carousel-inner mt-5">
-					<div class="carousel-item active">
-						<img src="assets/imgs/advertisments/20-Inch-TV-Smart-LED-2K-HD-Televisions-with-Plastic-Flat-Screen-Panel-TV-for-Hotel-TV-Factory-Sale-Payments-Available.jpg" class="d-block w-100 adv-img" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="assets/imgs/advertisments/LG-1.jpg" class="d-block w-100 adv-img" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="assets/imgs/advertisments/Apple_iPhone-11-Pro.jpg" class="d-block w-100 adv-img" alt="...">
-					</div>
-				</div>
-			</div>
-
-	 -->
-
-	<!-- ====== START FOOTER ====== -->
-	@include('components/footer')
-	<!-- ====== END FOOTER ====== -->
-
-	<script src="assets/js/bootstrap.js"></script>
-</body>
-</html>
+@stop

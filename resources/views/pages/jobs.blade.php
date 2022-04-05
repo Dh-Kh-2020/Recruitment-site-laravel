@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	@include('../components/meta')
-	<title>DHR</title>
-</head>
-<body class="bg-light">
-	<!-- ====== START HEADER ====== -->
-	@include('../components/header')
-	<!-- ====== END HEADER ====== -->
+@extends('layout.main')
 
+@section('main-content')
 	<!-- ====== START BANNER ====== -->
 	<section class="container-fluid d-flex justify-content-center">
 		<div class="mt-5 position-relative w-100">
@@ -200,14 +192,4 @@
         </div>
     </main>
 	<!-- ====== END JOBS ====== -->
-
-	<!-- ====== START FOOTER ====== -->
-	@include('../components/footer')
-	<!-- ====== END FOOTER ====== -->
-
-	<script src="../assets/js/bootstrap.js"></script>
-	<script>
-		
-	</script>
-</body>
-</html>
+@stop
