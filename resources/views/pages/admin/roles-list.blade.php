@@ -19,17 +19,17 @@
 											</tr>
 										</thead>
 										<tbody> 
-											<?php foreach($params as $role){?>
+											
 												<tr>
-													<td><?php echo $role['name'];  		?></td>
-													<td><?php if($role['is_active'] == 1){ ?>    
+													<td>role name</td>
+													<td>role state   
 															<span class="badge bg-label-success me-1">مفعل</span>
-														<?php }
-															else {?>
+														
+															
 															<span class="badge bg-label-danger me-1">موقف</span>
-														<?php } ?>
+														
 													</td>
-													<td><a href="/admin/edit_role?<?php echo $role['id']; ?>" class="btn btn-icon btn-outline-dribbble">
+													<td><a href="/admin/dashboard/edit-role" class="btn btn-icon btn-outline-dribbble">
 															<i class="tf-icons bx bx-edit-alt me-1"></i>
 														</a>
 														<button type="button" class="btn btn-icon btn-outline-dribbble">
@@ -37,7 +37,7 @@
 														</button>
 													</td>
 												</tr>
-											<?php } ?>
+											
 										</tbody>
 									</table>
 								</div>

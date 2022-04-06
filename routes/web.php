@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// =============== Main Pages =================
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -49,30 +50,57 @@ Route::get('/serveices', function () {
     return view('pages.services');
 })->name('serveices');
 
-Route::get('/admin/dashboard', function () {
-    return view('pages.dashboard.dashboard');
-})->name('dashboard');
 
-// Route::get('/acount', function () {
-//     return view('pages.dashboard.acount');
-// });
+// =================== Applicant Dashboard ====================
+Route::get('/applicant/dashboard', function () {
+    return view('pages.applicant.dashboard');
+})->name('applicant');
 
-Route::get('/admin/dashboard/course', function () {
-    return view('pages.dashboard.course');
+Route::get('/applicant/dashboard/course', function () {
+    return view('pages.applicant.course');
 })->name('course');
 
-Route::get('/admin/dashboard/experiences', function () {
-    return view('pages.dashboard.experience');
+Route::get('/applicant/dashboard/experiences', function () {
+    return view('pages.applicant.experience');
 })->name('experience');
 
-Route::get('/admin/dashboard/qualifications', function () {
-    return view('pages.dashboard.qualification');
+Route::get('/applicant/dashboard/qualifications', function () {
+    return view('pages.applicant.qualification');
 })->name('qualification');
 
-Route::get('/admin/dashboard/skills', function () {
-    return view('pages.dashboard.skills');
+Route::get('/applicant/dashboard/skills', function () {
+    return view('pages.applicant.skills');
 })->name('skills');
 
-// Route::post('/admin/dashboard', function () {
-//     return view('pages.dashboard.dashboard');
-// })->name('postLogin');
+// =============== Admin Dashsboard =================
+Route::get('/admin/dashboard', function () {
+    return view('pages.admin.dashboard');
+})->name('admin');
+
+// ------ User -------
+Route::get('/admin/dashboard/users-list', function () {
+    return view('pages.admin.users-list');
+})->name('all-users');
+
+Route::get('/admin/dashboard/add-new-user', function () {
+    return view('pages.admin.new-user');
+})->name('add-user');
+
+Route::get('/admin/dashboard/edit-user', function () {
+    return view('pages.admin.edit-user');
+})->name('edit-user');
+
+// ------ Role -------
+Route::get('/admin/dashboard/roles-list', function () {
+    return view('pages.admin.roles-list');
+})->name('all-roles');
+
+Route::get('/admin/dashboard/add-new-role', function () {
+    return view('pages.admin.new-role');
+})->name('add-role');
+
+Route::get('/admin/dashboard/edit-role', function () {
+    return view('pages.admin.edit-role');
+})->name('edit-role');
+
+// ------ 

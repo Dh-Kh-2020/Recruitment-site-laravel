@@ -18,7 +18,7 @@
                         <img src="../../assets/imgs/profile/computer-icons-icon-design-user-female-png-favpng-Fsujht93KTGPZWpH8vs1JxSwb.png" class="personal-photo" alt="">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{route('dashboard')}}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{route('applicant')}}">Profile</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="{{route('home')}}">Logout</a></li>
                     </ul>

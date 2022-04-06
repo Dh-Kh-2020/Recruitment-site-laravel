@@ -48,7 +48,7 @@
                                     </div>
 									<div class="mt-3 text-end"><a class="nav-link-style fs-ms mt-5" href="">Forgot password?</a></div>
                                 </div>
-								<a href="{{ route('dashboard') }}" class="btn btn-danger d-block w-100 rounded-pill" type="submit">Sign up</a>
+								<a href="{{ route('applicant') }}" class="btn btn-danger d-block w-100 rounded-pill" type="submit">Sign up</a>
 								<!-- <p class="fs-sm pt-3 mb-0">Do you have an account? <a href="register.html" class="fw-medium" data-view="#modal-signup-view">Sign up</a></p> -->
 							</form>
 						</div>
