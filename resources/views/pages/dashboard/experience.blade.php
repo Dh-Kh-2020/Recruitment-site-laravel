@@ -1,4 +1,4 @@
-<title>DHR | Admin - Experiences</title>
+<title>DHR | Applicant - Experiences</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')

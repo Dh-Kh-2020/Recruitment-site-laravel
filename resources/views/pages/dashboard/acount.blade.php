@@ -1,4 +1,4 @@
-<title>DHR | Admin - Account</title>
+<title>DHR | Applicant - Account</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')

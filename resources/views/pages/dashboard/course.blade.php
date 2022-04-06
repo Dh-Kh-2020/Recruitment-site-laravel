@@ -1,4 +1,4 @@
-<title>DHR | Admin - Courses</title>
+<title>DHR | Applicant - Courses</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')

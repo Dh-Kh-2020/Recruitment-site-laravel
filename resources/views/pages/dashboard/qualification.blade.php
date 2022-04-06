@@ -1,4 +1,4 @@
-<title>DHR | Admin - Qualification</title>
+<title>DHR | Applicant - Qualification</title>
 @extends('layout.dash-main')
 
 @section('dash-main-content')                
