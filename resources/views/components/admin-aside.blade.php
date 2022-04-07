@@ -146,38 +146,7 @@
         </a>
       </li>
     </ul>
-  </li> -->
-  <li class="menu-header small text-uppercase">
-    <span class="menu-header-text">Dashboard</span>
-  </li>
-  <li class="menu-item">
-    <a href="javascript:void(0);" class="menu-link menu-toggle">
-      <i class="menu-icon tf-icons bx bx-user"></i>
-      <div data-i18n="إدارة المستخدمين">إدارة المستخدمين</div>
-    </a>
-    <ul class="menu-sub">
-    <li class="menu-item">
-        <a href="/admin/dashboard/add-new-user" class="menu-link">
-          <div data-i18n="اضافة مستخدم">إضافة مستخدم</div>
-        </a>
-      </li>
-
-      <li class="menu-item">
-        <a href="/admin/dashboard/users-list" class="menu-link">
-          <div data-i18n="عرض المستخدمين">عرض المستخدمين</div>
-        </a>
-      </li>
-     
-    </ul>
-  </li>
-  <li class="menu-item">
-    <a href="javascript:void(0);" class="menu-link menu-toggle">
-      <i class="menu-icon tf-icons bx bx-category"></i>
-      <!-- <i class="fa-solid fa-cubes"></i> -->
-      <div data-i18n="إدارة الأقسام">إدارة الأقسام</div>
-    </a>
-    <ul class="menu-sub">
-    <li class="menu-item">
+    
         <a href="/admin/new_category" class="menu-link">
           <div data-i18n="اضافة قسم">اضافة قسم</div>
         </a>
