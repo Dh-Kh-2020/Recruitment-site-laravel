@@ -11,10 +11,10 @@
                                 </a>
                             </div>
                             <div class="col-12 text-center mb-2">
-                                <a class="fs-4 fw-bold text-red" href="{{route('dashboard')}}">Dhoha Alkhorasani</a>
+                                <a class="fs-4 fw-bold text-red" href="{{route('applicant')}}">Dhoha Alkhorasani</a>
                                 <p>An Engineer</p>
                             </div>
-                            <!-- navegation dashboard -->
+                            <!-- navegation applicant -->
                             <div class="col-12">
                                 <nav class="row pt-0">
                                     <header class="col-12 mb-2">
@@ -22,7 +22,7 @@
                                     </header>
                                     <div class="col-4 pt-2">
                                         <article class="h--75">
-                                            <a href="{{route('dashboard')}}" class="d-flex align-items-center text-blue">
+                                            <a href="{{route('applicant')}}" class="d-flex align-items-center text-blue">
                                                 <i class="bi bi-house-door fs-6"></i>
                                                 <span class="fs-6 fw-bold ms-3">home</span>
                                             </a>

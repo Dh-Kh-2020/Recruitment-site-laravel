@@ -8,7 +8,7 @@
 
 						<!-- Bordered Table -->
 						<div class="card mb-4">
-                            <form class="card-body" action="/admin/new_user" method="POST" enctype="multipart/form-data">
+                            <form class="card-body" action="/admin/dashboard/add-new-user" method="POST" enctype="multipart/form-data">
                                 <div class="row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label" for="multicol-username">اسم المستخدم</label>

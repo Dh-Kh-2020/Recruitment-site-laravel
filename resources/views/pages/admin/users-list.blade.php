@@ -22,20 +22,20 @@
 											</tr>
 										</thead>
 										<tbody> 
-											<?php foreach($params as $user){?>
+											
 												<tr>
-													<td><?php echo $user['name'];  		?></td>
-													<td><?php echo $user['email']; 		?></td>
-													<td><?php echo $user['password'];	?></td>
-													<td><?php echo $user['role_id'];	?></td>
-													<td><?php if($user['is_active'] == 1){ ?>    
+													<td>name</td>
+													<td>email</td>
+													<td>password</td>
+													<td>role-id</td>
+													<td>  
 															<span class="badge bg-label-success me-1">مفعل</span>
-														<?php }
-															else {?>
+														
+															
 															<span class="badge bg-label-danger me-1">موقف</span>
-														<?php } ?>
+
 													</td>
-													<td><a href="/edit_user/<?php echo $user['id']; ?>" class="btn btn-icon btn-outline-dribbble">
+													<td><a href="/admin/dashboard/edit-user" class="btn btn-icon btn-outline-dribbble">
 															<i class="tf-icons bx bx-edit-alt me-1"></i>
 														</a>
 														<button type="button" class="btn btn-icon btn-outline-dribbble">
@@ -43,7 +43,7 @@
 														</button>
 													</td>
 												</tr>
-											<?php } ?>
+											
 										</tbody>
 									</table>
 								</div>
