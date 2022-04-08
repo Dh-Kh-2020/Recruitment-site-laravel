@@ -165,7 +165,8 @@
             @error('confirm_admin_password')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-            <input type="hidden" name="admin_is_active" value="1">
+            <input type="hidden" name="admin_role" value="1">
+            <!-- <input type="hidden" name="admin_is_active" value="1"> -->
 
             <div class="mb-3">
               <div class="form-check">
