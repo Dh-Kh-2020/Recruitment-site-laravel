@@ -58,6 +58,16 @@ class AuthCtrl extends Controller
             ]
         );
 
+        $user = new User();
+        $user->name = $request->input('admin_fullname');
+        $user->name = $request->input('admin_username');
+        $user->email = $request->input('admin_email');
+        $user->password = Hash::make($request->input('admin_password'));
+        $user->email = $request->input('admin_role');
+        
+        if($user->save()){
+            return redirect()->route('admin');
+        }
     }
 
     public function reserPassword(){
