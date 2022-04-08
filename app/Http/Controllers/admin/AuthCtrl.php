@@ -8,6 +8,7 @@ use App\Rules\Password;
 use App\Rules\UserName;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class AuthCtrl extends Controller
@@ -30,8 +31,8 @@ class AuthCtrl extends Controller
         Validator::validate($request->all(),
             [
                 'admin_fullname'            => ['required', 'min:7', 'max:30', new FullName()],   //'regex:/\[^A-Za-z\-_ ]/'
-                'admin_username'            => ['required', 'min:7', 'max:20', new UserName()],    //  | regex:/\w*$/'  , 'alpha_num'
-                'admin_email'               => ['required', 'min:7', 'max:30', 'email'],    //'regix:/^\[a-z0-9\+_\-]+\.[a-z0-9\+_\-]+*@[a-z0-9\-]+\.+[a-z]{2,6}$/ix'
+                'admin_username'            => ['required', 'min:7', 'max:20', new UserName(), 'unique:users'],    //  | regex:/\w*$/'  , 'alpha_num'
+                'admin_email'               => ['required', 'min:7', 'max:30', 'email', 'unique:users'],    //'regix:/^\[a-z0-9\+_\-]+\.[a-z0-9\+_\-]+*@[a-z0-9\-]+\.+[a-z]{2,6}$/ix'
                 'admin_password'            => ['required', 'min:7', 'max:20', new Password()],
                 'confirm_admin_password'    => ['required', 'same:admin_password']
             ],
@@ -57,9 +58,6 @@ class AuthCtrl extends Controller
             ]
         );
 
-        $user = new User();
-        $user->name = $request->input('admin_username');
-        $user->save();
     }
 
     public function reserPassword(){
