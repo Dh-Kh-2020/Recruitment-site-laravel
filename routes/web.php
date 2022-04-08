@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\admin\AuthCtrl;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,7 +50,6 @@ Route::get('/serveices', function () {
     return view('pages.services');
 })->name('serveices');
 
-
 // =================== Applicant Dashboard ====================
 Route::get('/applicant/dashboard', function () {
     return view('pages.applicant.dashboard');
@@ -77,7 +76,7 @@ Route::get('/admin/dashboard', function () {
     return view('pages.admin.dashboard');
 })->name('admin');
 
-// ------ User -------
+// ------ Auth -------
 Route::get('/admin/dashboard/users-list', function () {
     return view('pages.admin.users-list');
 })->name('all-users');
@@ -89,6 +88,11 @@ Route::get('/admin/dashboard/add-new-user', function () {
 Route::get('/admin/dashboard/edit-user', function () {
     return view('pages.admin.edit-user');
 })->name('edit-user');
+
+Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
+Route::post('admin/do-login', [AuthCtrl::class, 'login'])->name('do-admin-login');
+Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
+Route::post('admin/do-register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
 // ------ Role -------
 Route::get('/admin/dashboard/roles-list', function () {
