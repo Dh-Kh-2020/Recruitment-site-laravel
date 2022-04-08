@@ -14,7 +14,7 @@ class AuthCtrl extends Controller
 {
     //
     public function showLogin(){
-        return view('pages.auth-login');
+        return view('pages.admin.auth-login');
     } 
 
     public function showRegister(){
