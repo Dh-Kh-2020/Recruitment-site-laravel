@@ -121,26 +121,28 @@
           <!-- /Logo -->
           <!-- <h4 class="mb-2">Adventure starts here 🚀</h4> -->
           <!-- <p class="mb-4">Make your app management easy and fun!</p> -->
-
+          @if(message)
+            <div>
+          @endif
           <form id="formAuthentication" class="mb-3" action="{{ route('do-admin-register') }}" method="POST">
             @csrf
             <div class="mb-3">
               <label for="username" class="form-label">Full name</label>
-              <input type="text" class="form-control" id="fullname" name="admin_fullname" placeholder="Enter your name" autofocus>
+              <input type="text" class="form-control" id="fullname" name="admin_fullname" value="{{ old('admin_fullname') }}" placeholder="Enter your name" autofocus>
             </div>
             @error('admin_fullname')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" id="username" name="admin_username" placeholder="Enter your username" autofocus>
+              <input type="text" class="form-control" id="username" name="admin_username" value="{{ old('admin_username') }}" placeholder="Enter your username" autofocus>
             </div>
             @error('admin_username')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" name="admin_email" placeholder="Enter your email">
+              <input type="text" class="form-control" id="email" name="admin_email" value="{{ old('admin_email') }}" placeholder="Enter your email">
             </div>
             @error('admin_email')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -148,7 +150,7 @@
             <div class="mb-3 form-password-toggle">
               <label class="form-label" for="password">Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="admin_password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                <input type="password" id="password" class="form-control" name="admin_password" value="{{ old('admin_password') }}" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
@@ -158,7 +160,7 @@
             <div class="mb-3 form-password-toggle">
               <label class="form-label" for="password">Confirm Password</label>
               <div class="input-group input-group-merge">
-                <input type="password" id="password" class="form-control" name="confirm_admin_password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
+                <input type="password" id="password" class="form-control" name="confirm_admin_password" value="{{ old('confirm_admin_password') }}" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
                 <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
               </div>
             </div>
