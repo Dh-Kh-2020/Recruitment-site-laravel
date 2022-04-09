@@ -90,9 +90,9 @@ Route::get('/admin/dashboard/edit-user', function () {
 })->name('edit-user');
 
 Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
-Route::post('admin/do-login', [AuthCtrl::class, 'login'])->name('do-admin-login');
+Route::post('admin/login', [AuthCtrl::class, 'login'])->name('do-admin-login');
 Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
-Route::post('admin/do-register', [AuthCtrl::class, 'register'])->name('do-admin-register');
+Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
 // ------ Role -------
 Route::get('/admin/dashboard/roles-list', function () {
