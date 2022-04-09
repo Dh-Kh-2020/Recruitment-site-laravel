@@ -31,7 +31,7 @@ class AuthCtrl extends Controller
         Validator::validate($request->all(),
             [
                 'admin_fullname'            => ['required', 'min:7', 'max:30', new FullName()],   //'regex:/\[^A-Za-z\-_ ]/'
-                'admin_username'            => ['required', 'min:7', 'max:20', new UserName(), 'unique:users'],    //  | regex:/\w*$/'  , 'alpha_num'
+                'admin_username'            => ['required', 'min:7', 'max:20', new UserName(), 'unique:users,username'],    //  | regex:/\w*$/'  , 'alpha_num'
                 'admin_email'               => ['required', 'min:7', 'max:30', 'email', 'unique:users,email'],    //'regix:/^\[a-z0-9\+_\-]+\.[a-z0-9\+_\-]+*@[a-z0-9\-]+\.+[a-z]{2,6}$/ix'
                 'admin_password'            => ['required', 'min:7', 'max:20', new Password()],
                 'confirm_admin_password'    => ['required', 'same:admin_password']
@@ -58,7 +58,17 @@ class AuthCtrl extends Controller
             ]
         );
 
-
+        $user = new User();
+        $user->name = $request->input('admin_fullname');
+        $user->username = $request->input('admin_username');
+        $user->email = $request->input('admin_email');
+        $user->password = Hash::make($request->input('admin_password'));
+        $user->role_id = $request->input('admin_role');
+        
+        if($user->save())
+            return redirect()->route('admin');
+        else 
+            return back()->with('failureMessage', 'Rgistration fialed !!');
     }
 
     public function reserPassword(){
