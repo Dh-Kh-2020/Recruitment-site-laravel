@@ -69,6 +69,7 @@ class AuthCtrl extends Controller
             return redirect()->route('admin');
         else 
             return back()->with('failureMessage', 'Rgistration fialed !!');
+    
     }
 
     public function reserPassword(){
