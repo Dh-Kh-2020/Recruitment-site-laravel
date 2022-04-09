@@ -121,8 +121,8 @@
           <!-- /Logo -->
           <!-- <h4 class="mb-2">Adventure starts here 🚀</h4> -->
           <!-- <p class="mb-4">Make your app management easy and fun!</p> -->
-          @if(message)
-            <div>
+          @if(session('failureMessage'))
+            <div class="alert alert-danger">{{ session('failureMessage') }}</div>
           @endif
           <form id="formAuthentication" class="mb-3" action="{{ route('do-admin-register') }}" method="POST">
             @csrf
