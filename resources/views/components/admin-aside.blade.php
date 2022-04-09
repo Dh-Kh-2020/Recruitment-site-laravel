@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-
-
-
-
 <!-- beautify ignore:start -->
 <html lang="en" class="light-style layout-navbar-fixed layout-menu-fixed " dir="ltr" data-theme="theme-semi-dark" data-../../dash_assets-path="../../dash_assets/" data-template="vertical-menu-template-semi-dark">
 
@@ -134,7 +130,7 @@
 
 <ul class="menu-inner ">
   <!-- Dashboards -->
-  <!-- <li class="menu-item">
+  <li class="menu-item">
     <a href="javascript:void(0);" class="menu-link menu-toggle">
       <i class="menu-icon tf-icons bx bx-home-circle"></i>
       <div data-i18n="Dashboards">Dashboards</div>
@@ -410,5 +406,3 @@
   </li>
 </aside>
 <!-- / Menu -->
-
- 
