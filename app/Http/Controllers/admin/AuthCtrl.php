@@ -69,6 +69,7 @@ class AuthCtrl extends Controller
             return redirect()->route('admin');
         else 
             return back()->with('failureMessage', 'Rgistration fialed !!');
+    
     }
 
     public function reserPassword(){
@@ -77,5 +78,17 @@ class AuthCtrl extends Controller
 
     public function logout(){
 
+    }
+
+    public function showAllUsers(){
+        return view('pages.admin.users-list');
+    }
+
+    public function showNewUser(){
+        return view('pages.admin.new-user');
+    }
+
+    public function showEditUser(){
+        return view('pages.admin.edit-user');
     }
 }
