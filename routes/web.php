@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\SiteCtrl;
-use App\Http\Controllers\admin\AuthCtrl;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\AuthCtrl;
+use App\Http\Controllers\admin\RoleCtrl;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,9 +54,7 @@ Route::get('/applicant/dashboard/skills', function () {
 })->name('skills');
 
 // =============== Admin Dashsboard =================
-Route::get('/admin/dashboard', function () {
-    return view('pages.admin.dashboard');
-})->name('admin');
+Route::get('/admin/dashboard', [AuthCtrl::class, 'adminDashboard'])->name('admin');
 
     // ------ Auth -------
 Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
@@ -64,27 +63,11 @@ Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-reg
 Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
     // ------ Users -------
-Route::get('/admin/dashboard/users-list', function () {
-    return view('pages.admin.users-list');
-})->name('all-users');
-
-Route::get('/admin/dashboard/add-new-user', function () {
-    return view('pages.admin.new-user');
-})->name('add-user');
-
-Route::get('/admin/dashboard/edit-user', function () {
-    return view('pages.admin.edit-user');
-})->name('edit-user');
+Route::get('/admin/dashboard/users-list', [AuthCtrl::class, 'showAllUsers'])->name('all-users');
+Route::get('/admin/dashboard/add-new-user', [AuthCtrl::class, 'showNewUser'])->name('add-user');
+Route::get('/admin/dashboard/edit-user', [AuthCtrl::class, 'showEditUser'])->name('edit-user');
 
     // ------ Role -------
-Route::get('/admin/dashboard/roles-list', function () {
-    return view('pages.admin.roles-list');
-})->name('all-roles');
-
-Route::get('/admin/dashboard/add-new-role', function () {
-    return view('pages.admin.new-role');
-})->name('add-role');
-
-Route::get('/admin/dashboard/edit-role', function () {
-    return view('pages.admin.edit-role');
-})->name('edit-role');
+Route::get('/admin/dashboard/roles-list', [RoleCtrl::class, 'showAllRoles'])->name('all-roles');
+Route::get('/admin/dashboard/add-new-role', [RoleCtrl::class, 'showNewRole'])->name('add-role');
+Route::get('/admin/dashboard/edit-role', [RoleCtrl::class, 'showEditRole'])->name('edit-role');
