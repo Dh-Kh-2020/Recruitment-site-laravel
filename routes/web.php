@@ -24,6 +24,26 @@ Route::get('/jobs', [SiteCtrl::class, 'viewJobs'])->name('jobs');
 Route::get('/partners', [SiteCtrl::class, 'viewPartners'])->name('partners');
 Route::get('/serveices', [SiteCtrl::class, 'viewServices'])->name('serveices');
 
+// =============== Admin Dashsboard =================
+Route::get('/admin/dashboard', [AuthCtrl::class, 'adminDashboard'])->name('admin');
+
+    // ------ Auth -------
+Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
+Route::post('admin/login', [AuthCtrl::class, 'login'])->name('do-admin-login');
+Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
+Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
+
+    // ------ Users -------
+// Route::get('/admin/dashboard/users-list', [AuthCtrl::class, 'showAllUsers'])->name('all-users');
+Route::get('/admin/dashboard/users-list', [AuthCtrl::class, 'listAllUsers'])->name('all-users');
+Route::get('/admin/dashboard/add-new-user', [AuthCtrl::class, 'showNewUser'])->name('add-user');
+Route::get('/admin/dashboard/edit-user', [AuthCtrl::class, 'showEditUser'])->name('edit-user');
+
+    // ------ Role -------
+Route::get('/admin/dashboard/roles-list', [RoleCtrl::class, 'showAllRoles'])->name('all-roles');
+Route::get('/admin/dashboard/add-new-role', [RoleCtrl::class, 'showNewRole'])->name('add-role');
+Route::get('/admin/dashboard/edit-role', [RoleCtrl::class, 'showEditRole'])->name('edit-role');
+
 // =================== Applicant Dashboard ====================
 Route::get('/applicant/dashboard', function () {
     return view('pages.applicant.dashboard');
@@ -52,22 +72,3 @@ Route::get('/applicant/dashboard/qualifications', function () {
 Route::get('/applicant/dashboard/skills', function () {
     return view('pages.applicant.skills');
 })->name('skills');
-
-// =============== Admin Dashsboard =================
-Route::get('/admin/dashboard', [AuthCtrl::class, 'adminDashboard'])->name('admin');
-
-    // ------ Auth -------
-Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
-Route::post('admin/login', [AuthCtrl::class, 'login'])->name('do-admin-login');
-Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
-Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
-
-    // ------ Users -------
-Route::get('/admin/dashboard/users-list', [AuthCtrl::class, 'showAllUsers'])->name('all-users');
-Route::get('/admin/dashboard/add-new-user', [AuthCtrl::class, 'showNewUser'])->name('add-user');
-Route::get('/admin/dashboard/edit-user', [AuthCtrl::class, 'showEditUser'])->name('edit-user');
-
-    // ------ Role -------
-Route::get('/admin/dashboard/roles-list', [RoleCtrl::class, 'showAllRoles'])->name('all-roles');
-Route::get('/admin/dashboard/add-new-role', [RoleCtrl::class, 'showNewRole'])->name('add-role');
-Route::get('/admin/dashboard/edit-role', [RoleCtrl::class, 'showEditRole'])->name('edit-role');
