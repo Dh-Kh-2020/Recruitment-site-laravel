@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\SiteCtrl;
-use App\Http\Controllers\admin\AuthCtrl;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\AuthCtrl;
+use App\Http\Controllers\admin\RoleCtrl;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,14 +70,6 @@ Route::get('/admin/dashboard/add-new-user', [AuthCtrl::class, 'showNewUser'])->n
 Route::get('/admin/dashboard/edit-user', [AuthCtrl::class, 'showEditUser'])->name('edit-user');
 
     // ------ Role -------
-Route::get('/admin/dashboard/roles-list', function () {
-    return view('pages.admin.roles-list');
-})->name('all-roles');
-
-Route::get('/admin/dashboard/add-new-role', function () {
-    return view('pages.admin.new-role');
-})->name('add-role');
-
-Route::get('/admin/dashboard/edit-role', function () {
-    return view('pages.admin.edit-role');
-})->name('edit-role');
+Route::get('/admin/dashboard/roles-list', [RoleCtrl::class, 'showAllRoles'])->name('all-roles');
+Route::get('/admin/dashboard/add-new-role', [RoleCtrl::class, 'showNewRole'])->name('add-role');
+Route::get('/admin/dashboard/edit-role', [RoleCtrl::class, 'showEditRole'])->name('edit-role');
