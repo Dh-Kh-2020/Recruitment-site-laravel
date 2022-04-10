@@ -91,4 +91,14 @@ class AuthCtrl extends Controller
     public function showEditUser(){
         return view('pages.admin.edit-user');
     }
+
+    public function listAllUsers(){
+        //
+        $users = User::where('is_active', 1)
+                        // ->where('email_verified_at', '!=' ,NULL)
+                        ->orderBy('id', 'desc')
+                        ->get();
+                        
+        return view('pages.admin.users-list')->with('allUsers',$users);;
+    }
 }

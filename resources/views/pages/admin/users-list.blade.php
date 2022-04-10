@@ -4,7 +4,7 @@
 @section('admin-main-content')
 					<!-- Content -->
 					<div class="container-xxl flex-grow-1 container-p-y">
-						<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>المستخدمون</h4>
+						<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light"></span>Users</h4>
 
 						<!-- Bordered Table -->
 						<div class="card"> 
@@ -13,21 +13,23 @@
 									<table class="table table-bordered">
 										<thead>
 											<tr>
-												<th>الاسم</th>
-												<th>الإيميل</th>
-												<th>كلمة السر</th>
-												<th>الصلاحية</th>
-												<th>الحالة</th>
-												<th>العمليات</th>
+												<th>#</th>
+												<th>Name</th>
+												<th>E-mail</th>
+												<th>Image</th>
+												<th>Role</th>
+												<th>Status</th>
+												<th>Actions</th>
 											</tr>
 										</thead>
 										<tbody> 
-											
+											@foreach ($allUsers as $user)
 												<tr>
-													<td>name</td>
-													<td>email</td>
-													<td>password</td>
-													<td>role-id</td>
+													<td>{{ $loop->iteration }}</td>
+													<td>{{ $user->name }}</td>
+													<td>{{ $user->email }}</td>
+													<td>{{ $user->image }}</td>
+													<td>{{ $user->role_id }}</td>
 													<td>  
 															<span class="badge bg-label-success me-1">مفعل</span>
 														
@@ -43,7 +45,7 @@
 														</button>
 													</td>
 												</tr>
-											
+											@endforeach
 										</tbody>
 									</table>
 								</div>
