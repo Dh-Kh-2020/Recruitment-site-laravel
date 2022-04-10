@@ -31,10 +31,11 @@
 													<td>{{ $user->image }}</td>
 													<td>{{ $user->role_id }}</td>
 													<td>  
-															<span class="badge bg-label-success me-1">مفعل</span>
-														
-															
-															<span class="badge bg-label-danger me-1">موقف</span>
+														@if ($user->is_active === 1)
+															<span class="badge bg-label-success me-1">active</span>
+														@else
+															<span class="badge bg-label-danger me-1">inactive</span>
+														@endif
 
 													</td>
 													<td><a href="/admin/dashboard/edit-user" class="btn btn-icon btn-outline-dribbble">
