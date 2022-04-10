@@ -64,17 +64,9 @@ Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-reg
 Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
     // ------ Users -------
-Route::get('/admin/dashboard/users-list', function () {
-    return view('pages.admin.users-list');
-})->name('all-users');
-
-Route::get('/admin/dashboard/add-new-user', function () {
-    return view('pages.admin.new-user');
-})->name('add-user');
-
-Route::get('/admin/dashboard/edit-user', function () {
-    return view('pages.admin.edit-user');
-})->name('edit-user');
+Route::get('/admin/dashboard/users-list', [AuthCtrl::class, 'showAllUsers'])->name('all-users');
+Route::get('/admin/dashboard/add-new-user', [AuthCtrl::class, 'showNewUser'])->name('add-user');
+Route::get('/admin/dashboard/edit-user', [AuthCtrl::class, 'showEditUser'])->name('edit-user');
 
     // ------ Role -------
 Route::get('/admin/dashboard/roles-list', function () {
