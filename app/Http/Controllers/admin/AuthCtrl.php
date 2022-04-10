@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Validator;
 class AuthCtrl extends Controller
 {
     //
+    public function adminDashboard(){
+        return view('pages.admin.dashboard');
+    }
+
     public function showLogin(){
         return view('pages.admin.auth-login');
     } 
@@ -96,7 +100,7 @@ class AuthCtrl extends Controller
         //
         $users = User::where('is_active', 1)
                         ->where('email_verified_at', '!=' ,NULL)
-                        ->orderBy('id', 'desc')
+                        ->orderBy('role_id')
                         ->get();
                         
         return view('pages.admin.users-list')->with('allUsers',$users);;
