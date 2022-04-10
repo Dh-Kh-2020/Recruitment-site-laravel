@@ -54,9 +54,7 @@ Route::get('/applicant/dashboard/skills', function () {
 })->name('skills');
 
 // =============== Admin Dashsboard =================
-Route::get('/admin/dashboard', function () {
-    return view('pages.admin.dashboard');
-})->name('admin');
+Route::get('/admin/dashboard', [AuthCtrl::class, 'adminDashboard'])->name('admin');
 
     // ------ Auth -------
 Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
