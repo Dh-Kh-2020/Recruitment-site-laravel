@@ -95,7 +95,7 @@ class AuthCtrl extends Controller
     public function listAllUsers(){
         //
         $users = User::where('is_active', 1)
-                        // ->where('email_verified_at', '!=' ,NULL)
+                        ->where('email_verified_at', '!=' ,NULL)
                         ->orderBy('id', 'desc')
                         ->get();
                         
