@@ -79,14 +79,4 @@ class AuthCtrl extends Controller
     public function logout(){
 
     }
-
-    public function listAll(){
-        //
-        $users = User::where('is_active',1)
-                        ->where('email_verified_at','!=',NULL)
-                        ->orderBy('user_id','desc')
-                        ->get();
-
-        return view('pages.admin.users-list')->with('allUsers',$users);
-    }
 }

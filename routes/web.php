@@ -63,7 +63,7 @@ Route::post('admin/do-login', [AuthCtrl::class, 'login'])->name('do-admin-login'
 Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
 Route::post('admin/do-register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
-    // ------ Admin -------
+    // ------ Users -------
 Route::get('/admin/dashboard/users-list', function () {
     return view('pages.admin.users-list');
 })->name('all-users');
