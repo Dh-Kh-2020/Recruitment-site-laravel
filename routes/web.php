@@ -59,9 +59,9 @@ Route::get('/admin/dashboard', function () {
 
     // ------ Auth -------
 Route::get('admin/login', [AuthCtrl::class, 'showLogin'])->name('admin-login');
-Route::post('admin/do-login', [AuthCtrl::class, 'login'])->name('do-admin-login');
+Route::post('admin/login', [AuthCtrl::class, 'login'])->name('do-admin-login');
 Route::get('admin/register', [AuthCtrl::class, 'showRegister'])->name('admin-register');
-Route::post('admin/do-register', [AuthCtrl::class, 'register'])->name('do-admin-register');
+Route::post('admin/register', [AuthCtrl::class, 'register'])->name('do-admin-register');
 
     // ------ Users -------
 Route::get('/admin/dashboard/users-list', function () {
@@ -88,5 +88,3 @@ Route::get('/admin/dashboard/add-new-role', function () {
 Route::get('/admin/dashboard/edit-role', function () {
     return view('pages.admin.edit-role');
 })->name('edit-role');
-
-// ------ 
