@@ -67,10 +67,12 @@ class AuthCtrl extends Controller
         $user->username = $request->input('admin_username');
         $user->email = $request->input('admin_email');
         $user->password = Hash::make($request->input('admin_password'));
-        $user->role_id = $request->input('admin_role');
+        // $user->role_id = $request->input('admin_role');
         
-        if($user->save())
+        if($user->save()){
+            $user->attachRole('admin');
             return redirect()->route('admin');
+        }
         else 
             return back()->with('failureMessage', 'Rgistration fialed !!');    
     }
